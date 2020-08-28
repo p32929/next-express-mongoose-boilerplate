@@ -9,9 +9,8 @@ export const overmind = createOvermind({
     state: {
         counter: 0,
         serverStatus: 0,
-        users: [{
-            name: "Fay"
-        }]
+        users: [],
+        currentUser: null
     },
     actions: {
         increase({state}, number) {
@@ -22,6 +21,9 @@ export const overmind = createOvermind({
         },
         setUsers({state}, users) {
             state.users = users
+        },
+        setCurrentUser({state}, currentUser) {
+            state.currentUser = currentUser
         }
     }
 });

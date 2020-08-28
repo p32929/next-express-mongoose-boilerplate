@@ -20,6 +20,7 @@
     "mongoose": "^5.10.1",
     "mongoose-autopopulate": "^0.12.2",
     "next": "^9.5.2",
+    "next-seo": "^4.7.3",
     "nodemon": "^2.0.4",
     "overmind": "^25.0.1",
     "overmind-react": "^26.0.1",

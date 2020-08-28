@@ -4,6 +4,7 @@ import {useOvermind} from "../helpers/OvermindHelper";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import {GlobalMethods} from "../helpers/GlobalMethods";
+import Link from 'next/link'
 
 const Index = (props) => {
     const {state, actions} = useOvermind()
@@ -45,8 +46,11 @@ const Index = (props) => {
                     // JSON.stringify(state.users)
 
                     state.users.map((item, index) => {
-                        return <Button style={{margin: 8}} color='primary' variant='contained' item={item}
-                                       key={index}>{item.name}</Button>
+                        return <Link
+                            href={`/user?id=${item._id}`}>
+                            <Button style={{margin: 8}} color='primary' variant='contained' item={item}
+                                    key={index}>{item.name}</Button>
+                        </Link>
                     })
                 }
             </Grid>

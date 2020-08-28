@@ -13,7 +13,7 @@ export class GlobalMethods {
         NodeFetchHelper.get('/users/', null, null, callback)
     }
 
-    static getOneUser(id) {
-
+    static getOneUser(id, callback) {
+        NodeFetchHelper.get('/users/byid/' + id, null, null, callback);
     }
 }

@@ -24,7 +24,7 @@ const _app = (props) => {
         <Provider value={overmind}>
             <React.Fragment>
                 <Head>
-                    {/*<title>My page</title>*/}
+                    <title>Index</title>
                     <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/>
                 </Head>
                 <ThemeProvider theme={theme}>

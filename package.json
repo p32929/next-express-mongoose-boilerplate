@@ -1,0 +1,32 @@
+{
+  "name": "Test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server/apis/server.js"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "async": "^3.2.0",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.1",
+    "mongoose-autopopulate": "^0.12.2",
+    "next": "^9.5.2",
+    "nodemon": "^2.0.4",
+    "overmind": "^25.0.1",
+    "overmind-react": "^26.0.1",
+    "passport": "^0.4.1",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^4.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

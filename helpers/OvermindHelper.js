@@ -7,11 +7,19 @@ import {createHook} from "overmind-react";
 export const useOvermind = createHook();
 export const overmind = createOvermind({
     state: {
-        counter: 0
+        counter: 0,
+        serverStatus: 0,
+        users: []
     },
     actions: {
         increase({state}, number) {
             state.counter += number
         },
+        setServerStatus({state}, status) {
+            state.serverStatus = status
+        },
+        setUsers({state}, users) {
+            state.users = users
+        }
     }
 });

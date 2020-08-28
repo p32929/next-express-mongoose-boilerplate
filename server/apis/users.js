@@ -36,48 +36,60 @@ router.post('/',
     })
 
 // Ra
-router.get('/', Auth.isAuthenticated, (req, res) => {
-    Model.getAllData({}, req.query['page'] ? req.query['page'] : 0, (err, data) => {
-        responder(res, err, data)
+router.get('/',
+    // Auth.isAuthenticated,
+    (req, res) => {
+        Model.getAllData({}, req.query['page'] ? req.query['page'] : 0, (err, data) => {
+            responder(res, err, data)
+        })
     })
-})
 
 
 // R1
-router.get('/byemail/:id', Auth.isAuthenticated, (req, res) => {
-    Model.getOneData({email: req.params['id']}, (err, data) => {
-        responder(res, err, data)
+router.get('/byemail/:id',
+    // Auth.isAuthenticated,
+    (req, res) => {
+        Model.getOneData({email: req.params['id']}, (err, data) => {
+            responder(res, err, data)
+        })
     })
-})
 
 // R1
-router.get('/byid/:id', Auth.isAuthenticated, (req, res) => {
-    Model.getOneData({_id: req.params['id']}, (err, data) => {
-        responder(res, err, data)
+router.get('/byid/:id',
+    // Auth.isAuthenticated,
+    (req, res) => {
+        Model.getOneData({_id: req.params['id']}, (err, data) => {
+            responder(res, err, data)
+        })
     })
-})
 
 // U1
-router.put('/:id', Auth.isAuthenticated, (req, res) => {
-    delete req.body.email
+router.put('/:id',
+    // Auth.isAuthenticated,
+    (req, res) => {
+        delete req.body.email
 
-    Model.updateOneData({_id: req.params.id}, req.body, (err, data) => {
-        responder(res, err, data)
+        Model.updateOneData({_id: req.params.id}, req.body, (err, data) => {
+            responder(res, err, data)
+        })
     })
-})
 
 // D1
-router.delete('/:id', Auth.isAuthenticated, (req, res) => {
-    Model.removeOneData({_id: req.params['id']}, (err, data) => {
-        responder(res, err, data)
+router.delete('/:id',
+    // Auth.isAuthenticated,
+    (req, res) => {
+        Model.removeOneData({_id: req.params['id']}, (err, data) => {
+            responder(res, err, data)
+        })
     })
-})
 
 // Da
-router.delete('/', Auth.isAuthenticated, (req, res) => {
-    Model.removeAllData((err, data) => {
-        responder(res, err, data)
+router.delete('/',
+    // Auth.isAuthenticated,
+    (req, res) => {
+        Model.removeAllData((err, data) => {
+            responder(res, err, data)
+        })
     })
-})
 
 module.exports = router;

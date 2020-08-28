@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import {useOvermind} from "../helpers/OvermindHelper";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import {GlobalMethods} from "../helpers/GlobalMethods";
 
 const Index = (props) => {
     const {state, actions} = useOvermind()
@@ -24,6 +25,21 @@ const Index = (props) => {
             }} variant='contained' color='primary' onClick={() => {
                 actions.increase(-1)
             }}>-</Button>
+
+            <Typography style={{marginTop: 32}} variant='h3'>Status code from server: {state.serverStatus}</Typography>
+            <Button variant='contained' color='primary' onClick={() => {
+                GlobalMethods.createRandomUser((status, jsonData) => {
+                    actions.setServerStatus(status)
+                    if (status > 0 && status <= 400) {
+                        GlobalMethods.getAllUsers((status, jsonData) => {
+                            actions.setUsers(jsonData)
+                        })
+                    }
+                })
+            }}>Create random user</Button>
+
+            <Typography>Users: {JSON.stringify(state.users)}</Typography>
+
         </Grid>
     );
 }

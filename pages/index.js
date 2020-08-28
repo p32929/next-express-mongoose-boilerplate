@@ -14,7 +14,7 @@ const Index = (props) => {
         <Grid style={{margin: 32}} container direction='column' alignContent='center' alignItems='center'
               justify='center'>
             <NextSeo
-                title={"Index ..."}
+                title={"Our Index"}
             />
 
             <Typography variant='h3'>Overmind states</Typography>

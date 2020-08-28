@@ -24,7 +24,7 @@ const User = ({router}) => {
     }, [router.query.id])
 
     return (
-        <Grid>
+        <Grid style={{margin: 16}}>
             <NextSeo title={state?.currentUser?.name ? "name: " + state?.currentUser?.name : "Loading..."}/>
             {
                 JSON.stringify(state.currentUser)

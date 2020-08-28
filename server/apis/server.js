@@ -21,7 +21,7 @@ db.once('open', () => {
     console.log('### Mongoose connected. Please wait until express is connected');
 
     //
-    const drop = true
+    const drop = false
     if (drop) {
         db.dropDatabase()
         console.log("### Db dropped")

@@ -38,7 +38,18 @@ const Index = (props) => {
                 })
             }}>Create random user</Button>
 
-            <Typography>Users: {JSON.stringify(state.users)}</Typography>
+            <Grid style={{marginTop: 16}} container direction='row' alignContent='center' alignItems='center'
+                  justify='center'>
+
+                {
+                    // JSON.stringify(state.users)
+
+                    state.users.map((item, index) => {
+                        return <Button style={{margin: 8}} color='primary' variant='contained' item={item}
+                                       key={index}>{item.name}</Button>
+                    })
+                }
+            </Grid>
 
         </Grid>
     );

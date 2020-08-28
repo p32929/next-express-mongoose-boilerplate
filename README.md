@@ -28,7 +28,8 @@ If you like my works and want to support me/my works, feel free to support or do
 5. Express
 6. Some middlewares
 7. NodeFetchHelper
-8. etc
+8. OAuth2
+9. etc
 
 ## How to use
 1. fork

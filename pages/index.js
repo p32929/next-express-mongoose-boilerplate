@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import {GlobalMethods} from "../helpers/GlobalMethods";
 import Link from 'next/link'
+import {NextSeo} from "next-seo";
 
 const Index = (props) => {
     const {state, actions} = useOvermind()
@@ -12,6 +13,10 @@ const Index = (props) => {
     return (
         <Grid style={{margin: 32}} container direction='column' alignContent='center' alignItems='center'
               justify='center'>
+            <NextSeo
+                title={"Index ..."}
+            />
+
             <Typography variant='h3'>Overmind states</Typography>
             <Typography variant='h6'>Counter: {state.counter}</Typography>
             <Button style={{

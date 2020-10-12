@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import {ThemeProvider} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../utils/theme';
 import {Provider} from "overmind-react";
-import {overmind} from '../helpers/OvermindHelper'
+import {theme} from '../src/Others/Theme';
+import {overmind} from '../src/Others/OvermindHelper'
 import {NextSeo} from "next-seo";
 
 React.useLayoutEffect = React.useEffect;

@@ -1,5 +1,5 @@
 import Document, {Html, Head, Main, NextScript} from 'next/document';
-import theme from '../utils/theme';
+import {theme} from '../src/Others/Theme';
 
 const MyDocument = () => {
     return (

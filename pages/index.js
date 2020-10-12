@@ -1,9 +1,10 @@
 import React from 'react';
 import Grid from "@material-ui/core/Grid";
-import {useOvermind} from "../helpers/OvermindHelper";
+import {theme} from '../src/Others/Theme';
+import {useOvermind} from '../src/Others/OvermindHelper'
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import {GlobalMethods} from "../helpers/GlobalMethods";
+import {GlobalMethods} from "../src/Others/GlobalMethods";
 import Link from 'next/link'
 import {NextSeo} from "next-seo";
 
@@ -50,7 +51,7 @@ const Index = (props) => {
                 {
                     // JSON.stringify(state.users)
 
-                    state.users.map((item, index) => {
+                    state?.users?.map((item, index) => {
                         return <Link
                             href={`/user?id=${item._id}`}>
                             <Button style={{margin: 8}} color='primary' variant='contained' item={item}

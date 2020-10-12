@@ -1,5 +1,5 @@
-const mongoose = require('../../utils/mongoose');
-const constants = require('../../utils/constants')
+const mongoose = require('../others/mongoose');
+const constants = require('../others/constants')
 
 const MongooseSchema = new mongoose.Schema({
     email: {

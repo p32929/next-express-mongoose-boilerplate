@@ -10,8 +10,8 @@ const next = require('next'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     handle = app.getRequestHandler(),
-    mongoose = require('../../utils/mongoose'),
-    constants = require('../../utils/constants')
+    mongoose = require('../others/mongoose'),
+    constants = require('../others/constants')
 
 //
 mongoose.connect(constants.mongoUrl);
